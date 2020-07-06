@@ -1,7 +1,3 @@
-import numpy as np
-
-
-
 """
 This file implements various first-order update rules that are commonly used
 for training neural networks. Each update rule accepts current weights and the
@@ -11,6 +7,8 @@ For each update rule a dictionary containing hyperparameter values and
 caches of moving averages is also passed as a parameter.
 """
 
+
+import numpy as np
 
 
 """
