@@ -1,6 +1,6 @@
 # Deep Learning from scratch
 
-This repository contains implementation of deep neural network architectures written from scratch using only numpy.
+This repository contains implementation of deep neural network architectures written from scratch using only numpy. The code is heavily inspired from the brilliant Stanford course *CS231n Convolutional Neural Networks for Visual Recognition*.
 
 The file `layers.py` contains the implementation of simple layers. For each layer a `forward` and a `backward` function are implemented. The `forward` function recieves inputs, weights, and other parameters and returns both an output and a `cache` object storing data needed for the backward pass. The `backward` function recieves upstream derivatives and the `cache` object, and returns gradients with respect to the inputs and weights. These layers are then combined to build classifiers with different architectures.
 
