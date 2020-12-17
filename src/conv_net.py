@@ -1,6 +1,8 @@
 import numpy as np
-from layers import *
-from layers_fast import *
+
+
+from .layers import *
+from .layers_fast import *
 
 
 """
@@ -174,3 +176,5 @@ class ConvNetwork(object):
         loss, grads = self._backward(y, scores, caches)
 
         return loss, grads
+
+#

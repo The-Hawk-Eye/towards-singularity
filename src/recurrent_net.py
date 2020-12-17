@@ -1,5 +1,7 @@
 import numpy as np
-from layers import *
+
+
+from .layers import *
 
 
 """
@@ -44,9 +46,9 @@ class RecurrentNetwork(object):
             self.params["Wx_%d" % i] = np.random.randn(hidden_dim, dim_mul * hidden_dim) / np.sqrt(hidden_dim) * weight_scale
             self.params["Wh_%d" % i] = np.random.randn(hidden_dim, dim_mul * hidden_dim) / np.sqrt(hidden_dim) * weight_scale
             self.params["b_%d" % i] = np.zeros(dim_mul * hidden_dim)
-        self.params["Wx_0"] = np.random.randn(input_dim, dim_mul * hidden_dim) / np.sqrt(input_dim) * weight_scale
+        self.params["Wx_0"] = np.random.randn(input_dim, dim_mul * hidden_dim) / np.sqrt(input_dim + hidden_dim) * weight_scale
 
-        self.params["W_out"] = np.random.randn(hidden_dim, output_dim) / np.sqrt(hidden_dim) * weight_scale
+        self.params["W_out"] = np.random.randn(hidden_dim, output_dim) / np.sqrt(hidden_dim + output_dim) * weight_scale
         self.params["b_out"] = np.zeros(output_dim)
 
         # Cast all parameters to the correct datatype.
@@ -205,3 +207,5 @@ class RecurrentNetwork(object):
             prev_c = next_c
 
         return sequence
+
+#

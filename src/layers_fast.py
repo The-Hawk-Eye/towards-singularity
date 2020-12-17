@@ -243,3 +243,5 @@ def max_pool_backward_im2col(dout, cache):
     dx = col2im_indices(dx_cols, (N * C, 1, H, W), pool_height, pool_width,
                 padding=0, stride=stride)
     dx = dx.reshape(x.shape)
+
+#

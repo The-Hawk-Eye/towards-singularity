@@ -1,6 +1,8 @@
 import numpy as np
-import layers
-from layers import *
+
+
+from . import layers
+from .layers import *
 
 
 """
@@ -233,3 +235,5 @@ class NeuralNetwork(object):
         loss, grads = self._backward(y, scores, caches)
 
         return loss, grads
+
+#

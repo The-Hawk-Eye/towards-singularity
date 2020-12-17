@@ -1,5 +1,8 @@
 import numpy as np
-from layers import *
+
+
+from .layers import *
+
 
 """
 A model for learning word vectors.
@@ -201,3 +204,5 @@ class word2vec(object):
             result.append(line)
 
         return result
+
+#

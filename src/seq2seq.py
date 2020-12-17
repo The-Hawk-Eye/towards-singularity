@@ -1,5 +1,7 @@
 import numpy as np
-from layers import *
+
+
+from .layers import *
 
 
 """
@@ -238,3 +240,5 @@ class Seq2Seq(object):
         grads = self._backward(dscores, caches)
 
         return loss, grads
+
+#
